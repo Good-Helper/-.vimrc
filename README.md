@@ -1,0 +1,2 @@
+# -.vimrc
+https://vimawesome.com/
