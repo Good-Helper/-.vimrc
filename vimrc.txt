@@ -1,0 +1,55 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+set number
+set hlsearch
+set incsearch
+
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-surround'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-colorscheme-switcher'
+
+call vundle#end()            
+filetype plugin indent on    
+set tabstop=4 
+set shiftwidth=4
+set smarttab
+set expandtab 
+set softtabstop=4 
+set autoindent
+let python_highlight_all = 1
+
+set t_Co=256
+autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+            
+syntax on
+
+set mousehide
+set mouse=a 
+set termencoding=utf-8 
+set novisualbell  
+set t_vb=
+set backspace=indent,eol,start whichwrap+=<,>,[,]
+set showtabline=1
+set wrap
+set linebreak
+set nobackup
+set noswapfile
+set encoding=utf-8 
+set fileencodings=utf8,cp1251
+set clipboard=unnamed
+set ruler
+set hidden
+
+set guifont=Monaco:h10
+colorscheme slate2
+map <C-n> :NERDTreeToggle<CR>
